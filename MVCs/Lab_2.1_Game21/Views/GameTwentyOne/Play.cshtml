@@ -1,0 +1,29 @@
+﻿@using Lab_2._1_Game21.Controllers
+@using Lab_2._1_Game21.Models
+@{
+    ViewBag.Title = "Play";
+}
+
+<h2>Play the Game 21</h2>
+
+@{
+    if (IsPost)
+    {
+    }
+    <form action="" method="POST">
+        <p>Current Number is: @GameTwentyOneModels.CurrentNumber</p>
+        <p>
+            <input type="radio" id="chooseOne" name="choice" value="1"/>
+            <label>1</label>
+        </p>
+        <p>
+            <input type="radio" id="chooseTwo" name="choice" value="2"/>
+            <label>2</label>
+        </p>
+        <p>
+            <input type="submit" value="Choose"/>
+        </p>
+        <h3>@ViewBag.result</h3>
+    </form>
+}
+
