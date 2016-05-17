@@ -54,8 +54,8 @@ namespace Lab_2._2_TicTacToe.Models
             if (message.Length > 0)
                 return message;
 
-            ChangeCordinates(ComputersTurn(), '0');
-            message = GameResult('0');
+            ChangeCordinates(ComputersTurn(), 'O');
+            message = GameResult('O');
             if (message.Length > 0)
                 return message;
 
@@ -112,7 +112,7 @@ namespace Lab_2._2_TicTacToe.Models
         }
         public static bool GameEndInTie()
         {
-            int counter = Board.TileCordinates.Count(cordinate => cordinate.Sign == '0' || cordinate.Sign == 'X');
+            int counter = Board.TileCordinates.Count(cordinate => cordinate.Sign == 'O' || cordinate.Sign == 'X');
             if (counter == 9)
                 return true;
             return false;

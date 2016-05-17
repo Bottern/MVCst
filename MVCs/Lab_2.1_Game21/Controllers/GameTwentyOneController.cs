@@ -22,10 +22,19 @@ namespace Lab_2._1_Game21.Controllers
         [HttpPost]
         public ActionResult Play(string buttonValue)
         {
-            int choice = int.Parse(Request["choice"]);
-            GameTwentyOneModels.CurrentNumber += choice;
-            ViewBag.result = GameTwentyOneModels.GamePlay();
+            try
+            {
+                 int choice = int.Parse(Request["choice"]);
+                 GameTwentyOneModels.CurrentNumber += choice;
+                 ViewBag.result = GameTwentyOneModels.GamePlay();
+                 return View();
+            }
+            catch (Exception)
+            {
+                ViewBag.result = "Make a choice";
+            }
             return View();
+
         }
     }
 }
