@@ -90,6 +90,8 @@ namespace Lab_3_ContosoBooks
 
             app.UseIdentity();
 
+            SampleData.Initialize(app.ApplicationServices);
+
             // To configure external authentication please see http://go.microsoft.com/fwlink/?LinkID=532715
 
             app.UseMvc(routes =>
